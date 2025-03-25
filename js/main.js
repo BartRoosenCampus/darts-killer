@@ -26,9 +26,9 @@ page.addPlayerBtn.addEventListener('click', e => {
     if ('' !== page.nameInput.value) {
         game.addPlayer(new Player(page.nameInput.value));
     }
-    // game.addPlayer(new Player("Bart"));
-    // game.addPlayer(new Player("Enara"));
-    // game.addPlayer(new Player("Paul"));
+    game.addPlayer(new Player("Bart"));
+    game.addPlayer(new Player("Enara"));
+    game.addPlayer(new Player("Paul"));
     // game.addPlayer(new Player("Bertje"));
     // game.addPlayer(new Player("Pickles"));
 

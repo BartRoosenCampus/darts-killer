@@ -99,11 +99,14 @@ export class Game {
                 playerRow.classList.add('playerRow3');
                 if (this.whoseTurn === player.id) playerRow.classList.add('activePlayer');
                 const nameCell = document.createElement('div');
+                nameCell.classList.add('top-left');
                 const progressCell = document.createElement('div');
+                progressCell.classList.add('top-right');
                 const buttonsCell = document.createElement('div');
+                buttonsCell.classList.add('bottom');
 
                 nameCell.innerHTML = `${player.name} [${player.number}]`;
-                progressCell.innerHTML = player.getScore();
+                progressCell.append(player.getScore());
 
                 if (this.gameOver === false) {
                     const tripleBtn = document.createElement('button');
