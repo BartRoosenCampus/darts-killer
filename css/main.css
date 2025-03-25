@@ -1,0 +1,38 @@
+body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+}
+
+.playerRow {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    border-bottom: 1px solid black;
+}
+
+.playerRow3 {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    border-bottom: 1px solid black;
+}
+
+.playerRow > div, .playerRow3 > div {
+    padding: 1em;
+}
+
+.activePlayer {
+    background-color: greenyellow;
+}
+
+.targetBtn {
+    padding: 1em;
+    width: 75px;
+    background-color: #1fd51f;
+    border: 1px solid #0b470b;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+#gameDashboard {
+    padding: 1em;
+    font-size: 1.3em;
+}
