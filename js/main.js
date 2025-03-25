@@ -12,25 +12,20 @@ const page = {
     addPlayerBtn: document.getElementById('addPlayer'),
     deleteAllPlayersBtn: document.getElementById('deleteAllPlayers'),
     gameDashboard: document.getElementById('gameDashboard'),
+    addPlayersForm: document.getElementById('addPlayersForm'),
+    exitForm: document.getElementById('exitForm'),
+    deleteGame: document.getElementById('deleteGame'),
 }
 
 const game = new Game(page);
-game.generatePlayersList();
 
-page.testBtn.addEventListener("click", (e) => {
-    game.assignNumbers();
-    console.log(game);
-});
+game.toggleFormView("addPlayer");
+game.generatePlayersList();
 
 page.addPlayerBtn.addEventListener('click', e => {
     if ('' !== page.nameInput.value) {
         game.addPlayer(new Player(page.nameInput.value));
     }
-    game.addPlayer(new Player("Bart"));
-    game.addPlayer(new Player("Enara"));
-    game.addPlayer(new Player("Paul"));
-    // game.addPlayer(new Player("Bertje"));
-    // game.addPlayer(new Player("Pickles"));
 
     page.nameInput.value = '';
     page.nameInput.focus();
@@ -38,4 +33,8 @@ page.addPlayerBtn.addEventListener('click', e => {
 
 page.deleteAllPlayersBtn.addEventListener('click', e => {
     game.deleteAllPlayers();
+});
+
+page.deleteGame.addEventListener('click', e => {
+    location.reload();
 });

@@ -182,6 +182,7 @@ export class Game {
                     const startBtn = document.createElement("button");
                     startBtn.innerHTML = "Start";
                     startBtn.addEventListener("click", () => {
+                        this.toggleFormView("exit");
                         this.whoseTurn = player.id;
                         this.gameStarted = true;
                         this.assignNumbers();
@@ -246,6 +247,17 @@ export class Game {
             player.reset();
         }
 
+        this.toggleFormView("addPlayer");
         this.generatePlayersList();
+    }
+
+    toggleFormView(view = null) {
+        if ("addPlayer" === view) {
+            this.page.exitForm.style.display = 'none';
+            this.page.addPlayersForm.style.display = 'block';
+        } else {
+            this.page.exitForm.style.display = 'block';
+            this.page.addPlayersForm.style.display = 'none';
+        }
     }
 }
