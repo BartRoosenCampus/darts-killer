@@ -60,14 +60,12 @@ export class Player {
         return this.id;
     }
 
-    createImage(src, howManny = 1) {
+    createImage(src) {
         const imageContainer = document.createElement('div');
-        for (let i = 0; i < howManny; i++) {
-            const image = document.createElement('img');
-            image.classList.add('image');
-            image.src = src;
-            imageContainer.appendChild(image);
-        }
+        const image = document.createElement('img');
+        image.classList.add('image');
+        image.src = src;
+        imageContainer.appendChild(image);
 
         return imageContainer;
     }
@@ -75,11 +73,11 @@ export class Player {
     getScore() {
         if (!this.inPlay) return this.createImage("img/sad.png");
         if (this.inPlay && this.score === 100) return this.createImage("img/winner.png");
-        if (this.inPlay && this.score === 0) return this.createImage("img/start.png");
-        if (this.inPlay && this.score === 1) return this.createImage("img/happy.png");
-        if (this.inPlay && this.score === 2) return this.createImage("img/happy.png", 2);
-        if (this.inPlay && this.score === 3) return this.createImage("img/happy.png", 3);
-        if (this.inPlay && this.score === 4) return this.createImage("img/happy.png", 4);
-        return (this.score < 5) ? this.score : this.createImage("img/killer.png");
+        if (this.inPlay && this.score === 0) return this.createImage("img/0.png");
+        if (this.inPlay && this.score === 1) return this.createImage("img/1.png");
+        if (this.inPlay && this.score === 2) return this.createImage("img/2.png");
+        if (this.inPlay && this.score === 3) return this.createImage("img/3.png");
+        if (this.inPlay && this.score === 4) return this.createImage("img/4.png");
+        return (this.score < 5) ? this.score : this.createImage("img/5.png");
     }
 }
