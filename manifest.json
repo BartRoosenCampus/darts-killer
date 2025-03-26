@@ -11,6 +11,11 @@
       "src": "/images/killer.png",
       "sizes": "32x32",
       "type": "image/png"
+    },
+    {
+      "src": "/images/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
