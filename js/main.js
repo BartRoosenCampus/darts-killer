@@ -40,8 +40,14 @@ page.deleteGame.addEventListener('click', e => {
 });
 
 
+// if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker.register('http://localhost/projects/Repositories/05_Andere/darts-killer/js/service-worker.js')
+//         .then(() => console.log('Service Worker geregistreerd!'))
+//         .catch((error) => console.error('Registratiefout:', error));
+// }
+
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('http://localhost/projects/Repositories/05_Andere/darts-killer/js/service-worker.js')
+    navigator.serviceWorker.register('https://bartroosencampus.github.io/darts-killer/js/service-worker.js')
         .then(() => console.log('Service Worker geregistreerd!'))
         .catch((error) => console.error('Registratiefout:', error));
 }
