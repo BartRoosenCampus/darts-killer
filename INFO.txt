@@ -1,0 +1,7 @@
+online
+------
+'https://bartroosencampus.github.io/darts-killer/js/service-worker.js'
+
+lokaal
+------
+'http://localhost/projects/Repositories/05_Andere/darts-killer/js/service-worker.js'

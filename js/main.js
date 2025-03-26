@@ -38,3 +38,10 @@ page.deleteAllPlayersBtn.addEventListener('click', e => {
 page.deleteGame.addEventListener('click', e => {
     location.reload();
 });
+
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('http://localhost/projects/Repositories/05_Andere/darts-killer/js/service-worker.js')
+        .then(() => console.log('Service Worker geregistreerd!'))
+        .catch((error) => console.error('Registratiefout:', error));
+}
