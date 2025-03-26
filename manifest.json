@@ -2,18 +2,18 @@
   "name": "Mijn PWA",
   "short_name": "PWA",
   "description": "Een voorbeeld Progressive Web App",
-  "start_url": "https://bartroosencampus.github.io/darts-killer//index.html",
+  "start_url": "https://bartroosencampus.github.io/darts-killer/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/images/killer.png",
+      "src": "https://bartroosencampus.github.io/darts-killer/img/killer.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "/images/512x512.png",
+      "src": "https://bartroosencampus.github.io/darts-killer/img/512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
